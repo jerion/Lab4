@@ -50,7 +50,7 @@ public class Main2Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case R.id.ice_0:
-                        ice = "去冰";
+                        ice = "微冰";
                         break;
                     case R.id.ice_1:
                         ice = "少冰";
