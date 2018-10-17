@@ -7,74 +7,66 @@
     tools:context=".Main2Activity">
 
     <TextView
-        android:id="@+id/titlea"
+        android:id="@+id/drink_t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="飲料:"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/drink_t"
+        android:id="@+id/drink_n"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="品名"
-        app:layout_constraintStart_toStartOf="@+id/titlea"
-        app:layout_constraintTop_toBottomOf="@+id/titlea" />
+        app:layout_constraintStart_toStartOf="@+id/drink_t"
+        app:layout_constraintTop_toBottomOf="@+id/drink_t" />
 
     <TextView
-        android:id="@+id/titleb"
+        android:id="@+id/sweet_t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="甜度:"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/drink"
-        app:layout_constraintTop_toBottomOf="@+id/drink" />
+        app:layout_constraintStart_toStartOf="@+id/drink_t"
+        app:layout_constraintTop_toBottomOf="@+id/drink_n" />
 
     <RadioGroup
-        android:id="@+id/sug"
+        android:id="@+id/sweet_g"
         android:layout_width="91dp"
         android:layout_height="162dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/titleb"
-        app:layout_constraintTop_toBottomOf="@+id/titleb">
+        app:layout_constraintStart_toStartOf="@+id/sweet_t"
+        app:layout_constraintTop_toBottomOf="@+id/sweet_t">
 
         <RadioButton
-            android:id="@+id/n_sug"
+            android:id="@+id/sweet_0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="無糖" />
 
         <RadioButton
-            android:id="@+id/s_sug"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="微糖" />
-
-        <RadioButton
-            android:id="@+id/h_sug"
+            android:id="@+id/sweet_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="半糖" />
 
         <RadioButton
-            android:id="@+id/l_sug"
+            android:id="@+id/sweet_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="少糖" />
 
         <RadioButton
-            android:id="@+id/f_sug"
+            android:id="@+id/sweet_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -82,52 +74,52 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/titlec"
+        android:id="@+id/ice_t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="冰塊:"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/titleb"
-        app:layout_constraintTop_toBottomOf="@+id/sug" />
+        app:layout_constraintStart_toStartOf="@+id/sweet_t"
+        app:layout_constraintTop_toBottomOf="@+id/sweet_g" />
 
     <RadioGroup
-        android:id="@+id/iceg"
-        android:layout_width="74dp"
+        android:id="@+id/ice_g"
+        android:layout_width="82dp"
         android:layout_height="111dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/titlec"
-        app:layout_constraintTop_toBottomOf="@+id/titlec">
+        app:layout_constraintStart_toStartOf="@+id/ice_t"
+        app:layout_constraintTop_toBottomOf="@+id/ice_t">
 
         <RadioButton
-            android:id="@+id/s_ice"
-            android:layout_width="73dp"
+            android:id="@+id/ice_0"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="微冰" />
 
         <RadioButton
-            android:id="@+id/h_ice"
-            android:layout_width="74dp"
+            android:id="@+id/ice_1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="少冰" />
 
         <RadioButton
-            android:id="@+id/f_ice"
-            android:layout_width="wrap_content"
+            android:id="@+id/ice_2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="正常冰" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/seet"
+        android:id="@+id/finish_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="送出"
-        app:layout_constraintStart_toStartOf="@+id/titlec"
-        app:layout_constraintTop_toBottomOf="@+id/iceg" />
+        app:layout_constraintStart_toStartOf="@+id/ice_t"
+        app:layout_constraintTop_toBottomOf="@+id/ice_g" />
 </android.support.constraint.ConstraintLayout>

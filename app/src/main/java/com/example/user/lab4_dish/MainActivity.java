@@ -8,24 +8,39 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button selec;
-    TextView drink;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        selec = (Button)findViewById(R.id.selec);
-        selec.setOnClickListener(new View.OnClickListener() {
+        Button selec_b = (Button) findViewById(R.id.selec_b);
+
+        selec_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent();
+                Intent i = new Intent();
                 i.setClass(MainActivity.this,Main2Activity.class);
-                startActivityForResult(i,0);
+                startActivityForResult(i, 0);
             }
         });
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if (requestCode == 0){
+            if (resultCode == 101){
+                Bundle b = data.getExtras();
+
+                String drink = b.getString("drink");
+                String sweet = b.getString("sweet");
+                String ice = b.getString("ice");
+
+                TextView drink_f = (TextView) findViewById(R.id.drink);
+                TextView sweet_f = (TextView) findViewById(R.id.sweet);
+                TextView ice_f = (TextView) findViewById(R.id.ice);
+
+                drink_f.setText(drink);
+                sweet_f.setText(sweet);
+                ice_f.setText(ice);
+            }
+        }
     }
 }
